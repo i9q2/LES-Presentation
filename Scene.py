@@ -55,15 +55,22 @@ class Presentation(Slide):
         gleichungGroupClone = VGroup(gleichungEGClone, gleichungEG2Clone, gleichungEG3Clone)
         why =  Text('?', font_size=384)
 
-        x_power = MathTex(r"x^{1}", font_size=78).move_to(gleichungEGClone[0]).align_to(gleichungEGClone[0], DOWN).shift(0.15*RIGHT)
-        
+        x_power = MathTex(r"x",r"^{1}", font_size=78).move_to(gleichungEGClone[0]).align_to(gleichungEGClone[0], DOWN).shift(0.15*RIGHT)
 
-        x_power_2 = MathTex(r"x^{1}", font_size=78).move_to(gleichungEG2Clone[1]).align_to(gleichungEG2Clone[1], DOWN).shift(0.15*RIGHT)
-        y_power_2 = MathTex(r"y^{1}", font_size=78).move_to(gleichungEG2Clone[3]).align_to(gleichungEG2Clone[3], DOWN).shift(0.15*RIGHT)
+        x_power_2 = MathTex(r"x",r"^{1}", font_size=78).move_to(gleichungEG2Clone[1]).align_to(gleichungEG2Clone[1], DOWN).shift(0.15*RIGHT)
+        y_power_2 = MathTex(r"y",r"^{1}", font_size=78).move_to(gleichungEG2Clone[3]).align_to(gleichungEG2Clone[3], DOWN).shift(0.15*RIGHT)
         
-        x_power_3 = MathTex(r"x^{1}", font_size=78).move_to(gleichungEG3Clone[1]).align_to(gleichungEG3Clone[1], DOWN).shift(0.15*RIGHT)
-        y_power_3 = MathTex(r"y^{1}", font_size=78).move_to(gleichungEG3Clone[4]).align_to(gleichungEG3Clone[4], DOWN).shift(0.15*RIGHT)
+        x_power_3 = MathTex(r"x",r"^{1}", font_size=78).move_to(gleichungEG3Clone[1]).align_to(gleichungEG3Clone[1], DOWN).shift(0.15*RIGHT)
+        y_power_3 = MathTex(r"y",r"^{1}", font_size=78).move_to(gleichungEG3Clone[4]).align_to(gleichungEG3Clone[4], DOWN).shift(0.15*RIGHT)
         
+        x_power.set_color_by_tex_to_color_map({"^{1}": RED_E})
+        x_power_2.set_color_by_tex_to_color_map({"^{1}": RED_E})
+        x_power_3.set_color_by_tex_to_color_map({"^{1}": RED_E})
+
+        y_power_2.set_color_by_tex_to_color_map({"^{1}": RED_E})
+        y_power_3.set_color_by_tex_to_color_map({"^{1}": RED_E})
+
+
         gleichungEGClone2 = MathTex(r"x", r"+", r"2", r"y", r"^{0}", r"=", r"4", font_size = 78).next_to(gleichungEG3, LEFT, buff=0.8)
         gleichungEG2Clone2 = MathTex(r"2", r"x", r"-", r"y", r"=", r"z", font_size = 78).next_to(gleichungEG3, RIGHT, buff=0.8)
         gleichungEG3Clone2 = MathTex(r"a", r"x", r"+", r"b", r"y", r"=", r"c", font_size = 78)
